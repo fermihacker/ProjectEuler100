@@ -1,0 +1,22 @@
+def pall(n):
+    k=str(n)
+    k=k[::-1]
+    if(int(k)==n):
+        return True
+
+def main():
+    x=999
+    y=999
+    l=[0,]
+    i=0
+    while(x>0):
+        while(y>0):
+            k=x*y
+            if(pall(k)==True):
+                l.append(k)
+                #print(k)
+                i=i+1
+            y=y-1
+        y=999
+        x=x-1   
+    return max(l)    
