@@ -1,0 +1,18 @@
+def fact(n):
+    m=1
+    p=1
+    while(m<=n):
+       p=p*m 
+       m+=1
+    return p
+
+def digit(n):
+    s=[]
+    k=n
+    while(k>0):
+       s.append(k%10) 
+       k=k//10
+    s.reverse()
+    return s
+
+sum(digit(fact(100)))
