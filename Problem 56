@@ -1,0 +1,16 @@
+def loop(n):
+    s=[]
+    p=[]
+    a=1
+    b=1
+    while(a<n):
+        while(b<n):
+            s.append(digit_sum(a**b))
+            p.append(a**b)
+            b+=1
+        a+=1
+        b=1
+    v=s.index(max(s))
+    return max(s),p[v]
+
+loop(100)
