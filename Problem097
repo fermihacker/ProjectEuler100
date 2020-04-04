@@ -1,7 +1,10 @@
-s=[ ]
-k=0
-i=10
-while(k<=i):
-    m=(28433*2**7830457+1)%pow(10,k)
-    k+=1
-    s.append(m)
+from time import time
+
+def ret_dig(n, i):
+     return int(str(n)[-i:])
+
+if __name__ == "__main__":
+     start = time()
+     print(main())
+     print("Time Taken:{}".format(time() - start))
+
