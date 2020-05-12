@@ -1,8 +1,8 @@
-def loop(n):
-   s=[]
-   for i in range(1,n):
-       if(i%3==0 or i%5==0):
-           s.append(i)
-   return sum(s)
-   
-loop(1000)
+from time import time
+
+main = lambda : sum([i for i in range(1001) if (i % 3 == 0 or i % 5 == 0)])
+
+if __name__ == '__main__':
+    start = time()
+    print("Answer:{}".format(main()))
+    print("Time Taken:{}".format(time() - start))
