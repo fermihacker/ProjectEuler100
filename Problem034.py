@@ -32,4 +32,10 @@ def loop(n):
         i+=1
     return sum(s)
 
-loop(pow(10,5))
+answer = loop(pow(10,5))
+
+from time import time
+if __name__ == '__main__':
+    start = time()
+    print("Answer:{}".format(answer))
+    print("Time Taken:{}".format(time() - start))
