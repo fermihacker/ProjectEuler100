@@ -1,3 +1,5 @@
+from time import time
+
 def digits(n):
     s=[]
     k=n
@@ -21,5 +23,9 @@ def loop(n):
         a+=1
     return s
 
-len(loop(100))
+answer = len(loop(100))
 
+if __name__ == '__main__':
+    start = time()
+    print("Answer:{}".format(answer))
+    print("Time Taken:{}".format(time() - start))
