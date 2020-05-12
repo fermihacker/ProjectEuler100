@@ -1,3 +1,5 @@
+from time import time
+
 def loop(n):
     s=[]
     p=[]
@@ -13,4 +15,9 @@ def loop(n):
     v=s.index(max(s))
     return max(s),p[v]
 
-loop(100)
+answer = loop(100)
+
+if __name__ == '__main__':
+    start = time()
+    print("Answer:{}".format(answer))
+    print("Time Taken:{}".format(time() - start))
