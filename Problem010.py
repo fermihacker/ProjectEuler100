@@ -9,3 +9,5 @@ def prime_sum():
          if prime(i):
              s.append(i)
      return sum(s)
+
+print(prime_sum())
