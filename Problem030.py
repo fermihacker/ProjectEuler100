@@ -21,3 +21,8 @@ def loop(n):
         i+=1
     return sum(s)
 
+if __name__ == '__main__':
+    start = time()
+    print("Answer:{}".format(loop()))
+    print("Time Taken:{}".format(time() - start))
+   
