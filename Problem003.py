@@ -10,4 +10,4 @@ def factor(n):
         if n%k==0 and is_Prime(k)!=False:
             return k
             break
-
+            
