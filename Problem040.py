@@ -1,3 +1,5 @@
+from time import time
+
 def make(s):
     i=0
     k=''
@@ -22,4 +24,9 @@ def d(n,i):
     s=make(con(n))
     return s[i]
 
-d(1000,1)*d(1000,10)*d(1000,100)*d(1000*1000)*(1000*10000)
+answer = d(1000,1)*d(1000,10)*d(1000,100)*d(1000*1000)*(1000*10000)
+
+if __name__ == '__main__':
+    start = time()
+    print("Answer:{}".format(answer))
+    print("Time Taken:{}".format(time() - start))
