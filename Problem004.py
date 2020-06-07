@@ -1,6 +1,6 @@
 from time import time
 
-isPall = lambda s : s==s[::-1]
+isPall = lambda s : str(s)==str(s)[::-1]
 
 def main():
     res = []
@@ -10,6 +10,20 @@ def main():
                 res.append(i*j)
     return max(res)
                
+if __name__ == "__main__":
+    start = time()
+    print("Answer:{}".format(main()))
+    print("Time taken:{}".format(time()-start))
+    
+#------------------------------------------------------------------------------------------------------------------------
+# A Better solution:
+
+from time import time
+
+isPall = lambda s : str(s)==str(s)[::-1]
+
+main = lambda : max([i*j for (i,j) in enumerate(list(range(100,1001)),100) if isPall(i*j)])
+
 if __name__ == "__main__":
     start = time()
     print("Answer:{}".format(main()))
