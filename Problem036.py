@@ -36,4 +36,21 @@ def loop(n):
         i+=1
     return s
 
-sum(loop(pow(10,6)))
+print(sum(loop(pow(10,6))))
+
+#------------------------------------------------------------------------------------------------------------------------------
+#Problem's solution redone:
+
+from time import time
+
+pall = lambda n : str(n) == str(n)[ : : -1]
+
+check = lambda n : pall(n) and pall(bin(n).replace('0b',''))
+
+main = lambda : sum([i for i in range(1,10**6) if check(i)])
+
+if __name__ == "__main__":
+    start = time()
+    print('Answer:{}'.format(main()))
+    print("Time taken:{}".format(time() - start))
+
